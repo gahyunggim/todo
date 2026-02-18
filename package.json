@@ -1,0 +1,8 @@
+{
+  "name": "todo-kanban-monorepo",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "test": "npm run test -w backend && npm run test -w frontend"
+  }
+}
