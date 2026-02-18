@@ -31,7 +31,7 @@ describe('App', () => {
 
     render(<App />);
     fireEvent.change(screen.getByLabelText('새 작업'), { target: { value: '새 작업' } });
-    fireEvent.click(screen.getByRole('button', { name: '추가' }));
+    fireEvent.click(screen.getByRole('button', { name: '작업 추가' }));
 
     await waitFor(() => {
       expect(fetchMock).toHaveBeenCalledWith(expect.stringContaining('/api/tasks'), expect.objectContaining({ method: 'POST' }));
